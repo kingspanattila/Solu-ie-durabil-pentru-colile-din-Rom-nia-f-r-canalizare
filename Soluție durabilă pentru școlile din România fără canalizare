@@ -1,112 +1,100 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Soluție durabilă pentru școlile din România</title>
-  <meta name="description" content="Prezentare Kingspan pentru școlile fără canalizare din România.">
+  <meta name="description" content="Prezentare Kingspan pentru școlile fără canalizare din România." />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 2rem;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    h1 {
-      color: #005baa;
-    }
-    iframe, embed, img {
-      border: 1px solid #ccc;
-      margin-top: 1rem;
-      max-width: 100%;
-    }
-    .button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 10px 20px;
-      background-color: #005baa;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    form {
-      margin-top: 2rem;
-      background: #fff;
-      padding: 1rem;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-    }
-    label {
-      display: block;
-      margin-top: 1rem;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 0.5rem;
-      margin-top: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    button {
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      background-color: #005baa;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .fallback {
-      font-size: 0.9rem;
-      color: #666;
-      margin-top: 0.5rem;
-    }
+    :root { --brand:#005baa; --bg:#f9f9f9; --text:#333; --muted:#666; --line:#ddd; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, sans-serif; background:var(--bg); color:var(--text); }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 24px; }
+    h1, h2 { color: var(--brand); margin: 0.6rem 0; }
+    p { line-height: 1.55; }
+    .card { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px; margin:16px 0; }
+    iframe, embed, img { width:100%; border:1px solid #ccc; border-radius:6px; background:#fff; }
+    .button { display:inline-block; margin-top:10px; padding:10px 18px; background:var(--brand); color:#fff; text-decoration:none; border-radius:6px; }
+    form { display:block; margin-top:12px; }
+    label { display:block; margin-top:12px; font-weight:bold; }
+    input, textarea { width:100%; margin-top:6px; padding:10px; border:1px solid #bbb; border-radius:6px; font: inherit; }
+    button { margin-top:14px; padding:10px 16px; background:var(--brand); color:#fff; border:none; border-radius:6px; cursor:pointer; }
+    .fallback { font-size:0.9rem; color:var(--muted); margin-top:8px; }
+    .row { display:grid; grid-template-columns: 1fr; gap:16px; }
+    @media (min-width: 880px) { .row { grid-template-columns: 1fr 1fr; } }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
   </style>
 </head>
 <body>
+  <div class="wrap">
+    <header class="card">
+      <h1>Soluție durabilă pentru școlile din România fără canalizare</h1>
+      <p>O soluție ecologică, eficientă și rapid implementabilă pentru unitățile de învățământ care nu au acces la rețea de canalizare.</p>
+    </header>
 
-  <h1>Soluție durabilă pentru școlile din România fără canalizare</h1>
-  <p>Un număr îngrijorător de mare de elevi români încep anul școlar fără acces la toalete funcționale. Kingspan oferă o soluție ecologică și eficientă pentru aceste comunități.</p>
+    <section class="row">
+      <div class="card">
+        <h2>Imagine prezentare</h2>
+        <img
+          src="imagine-produs.jpeg"
+          alt="Soluție de epurare Kingspan pentru școli"
+          onerror="this.style.display='none'; document.getElementById('img-fallback').style.display='block';"
+        />
+        <div id="img-fallback" class="fallback" style="display:none;">
+          Imaginea nu s-a încărcat. Poți încerca să o descarci direct:
+          <a href="imagine-produs.jpeg" download>Descarcă imaginea</a>
+        </div>
+      </div>
 
-  <h2>📷 Imagine produs</h2>
-  <img src="imagine-produs.jpeg" alt="Imagine produs" onerror="this.style.display='none'; document.getElementById('img-fallback').style.display='block';">
-  <div id="img-fallback" class="fallback" style="display:none;">
-    Imaginea nu s-a încărcat. <a href="imagine-produs.jpeg" download>📥 Descarcă imaginea</a>
+      <div class="card">
+        <h2>Prezentare generală (PDF)</h2>
+        <iframe src="prezentare-scoli-romania.pdf" title="Prezentare generală" height="420"></iframe>
+        <div class="fallback">
+          Dacă PDF-ul nu se afișează, îl poți descărca:
+          <a class="button" href="prezentare-scoli-romania.pdf" download>Descarcă prezentarea</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Broșură BioDisc (PDF)</h2>
+      <embed src="brosura.pdf" type="application/pdf" height="600" />
+      <div class="fallback">
+        Dacă broșura nu se afișează, o poți descărca:
+        <a class="button" href="brosura.pdf" download>Descarcă broșura</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Solicită informații sau ofertă</h2>
+      <form action="https://formspree.io/f/xgvlzzbb" method="POST">
+        <label for="name">Nume</label>
+        <input id="name" name="name" type="text" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="_replyto" type="email" required />
+
+        <label for="message">Mesaj</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <!-- Honeypot anti-spam -->
+        <label class="sr-only" aria-hidden="true">Nu completa</label>
+        <input class="sr-only" type="text" name="honeypot" tabindex="-1" autocomplete="off" />
+
+        <!-- Opțional: copie și redirect după trimitere -->
+        <input type="hidden" name="_cc" value="kingspanattila@gmail.com" />
+        <input type="hidden" name="_redirect" value="https://kingspanattila.github.io/Solu-ie-durabil-pentru-colile-din-Rom-nia-f-r-canalizare/multumim.html" />
+
+        <button type="submit">Trimite cererea</button>
+      </form>
+      <noscript>
+        <p class="fallback">Pentru trimiterea formularului, activează JavaScript sau scrie-ne direct la: kingspanattila@gmail.com</p>
+      </noscript>
+    </section>
+
+    <footer class="card">
+      <p class="fallback">Dacă vreun fișier nu se încarcă, reîncearcă un refresh forțat (Ctrl/Cmd + Shift + R) sau descarcă direct din linkurile de mai sus.</p>
+    </footer>
   </div>
-
-  <h2>📄 Prezentare PDF</h2>
-  <iframe src="prezentare-scoli-romania.pdf" width="100%" height="600"></iframe>
-  <div class="fallback">
-    Dacă PDF-ul nu se afișează, <a href="prezentare-scoli-romania.pdf" download>📥 descarcă prezentarea</a>
-  </div>
-
-  <h2>📄 Broșură BioDisc</h2>
-  <embed src="biodisc-brosura.pdf" type="application/pdf" width="100%" height="600">
-  <div class="fallback">
-    Dacă broșura nu se afișează, <a href="biodisc-brosura.pdf" download>📥 descarcă broșura</a>
-  </div>
-
-  <h2>📬 Solicită informații</h2>
-  <form action="https://formspree.io/f/xgvlzzbb" method="POST">
-    <label for="name">Nume:</label>
-    <input type="text" id="name" name="name" required>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="_replyto" required>
-
-    <label for="message">Mesaj:</label>
-    <textarea id="message" name="message" rows="5" required></textarea>
-
-    <label style="display:none;">
-      Nu completa acest câmp:
-      <input type="text" name="honeypot">
-    </label>
-
-    <input type="hidden" name="_redirect" value="https://kingspanattila.github.io/Solu-ie-durabil-pentru-colile-din-Rom-nia-f-r-canalizare/multumim.html">
-    <input type="hidden" name="_cc" value="kingspanattila@gmail.com">
-
-    <button type="submit">Trimite cererea</button>
-  </form>
-
 </body>
 </html>
